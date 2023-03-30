@@ -15,7 +15,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
         'health',
         'science',
         'sports',
-        'tecchnology',
+        'technology',
     ];
 
     // Need specific format with params{}
