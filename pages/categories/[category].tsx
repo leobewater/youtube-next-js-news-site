@@ -1,6 +1,8 @@
 import NewsArticlesGrid from "@/components/NewsArticlesGrid";
 import { NewsArticle, NewsResponse } from "@/models/NewsArticles";
 import { GetStaticPaths, GetStaticProps } from "next";
+import Head from "next/head";
+import { useRouter } from "next/router";
 
 interface CategoryNewsPageProps {
     newsArticles: NewsArticle[]
@@ -43,9 +45,17 @@ export const getStaticProps: GetStaticProps<CategoryNewsPageProps> = async ({ pa
 }
 
 const CategoryNewsPage = ({ newsArticles }: CategoryNewsPageProps) => {
-    
+    const router = useRouter();
+    const categoryName = router.query.category?.toString();
+
+    const title = "Category: " + categoryName;
+
     return (<>
+        <Head>
+            <title key="title">{title} - NextJs News App</title>
+        </Head>
         <main>
+            <h1>{title}</h1>
             <NewsArticlesGrid articles={newsArticles} />
         </main>
     </>);
