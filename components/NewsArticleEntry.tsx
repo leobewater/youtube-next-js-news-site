@@ -1,4 +1,5 @@
 import { NewsArticle } from "@/models/NewsArticles";
+import { Card } from "react-bootstrap";
 
 // Set up component prop
 interface NewsArticleEntryProps {
@@ -9,7 +10,13 @@ const NewsArticleEntry = ({ article: { title, description, url, urlToImage } }: 
     const validImageUrl = (urlToImage?.startsWith('http://') || urlToImage?.startsWith('https://')) ? urlToImage : undefined;
 
     return (
-        <h1>{title}</h1>
+        <a href={url}><Card className="h-100">
+            <Card.Img src={validImageUrl} variant="top" />
+            <Card.Body>
+                <Card.Title>{title}</Card.Title>
+                <Card.Text>{description}</Card.Text>
+            </Card.Body>
+        </Card></a>
     );
 }
 
