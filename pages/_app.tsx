@@ -13,8 +13,8 @@ export default function App({ Component, pageProps }: AppProps) {
     <div className={inter.className}>
       {/* <Head> automatically be moved to the <head> in html */}
       <Head>
-        <title>NextJS News App</title>
-        <meta name="description" content="NextJS crash course by Coding in Flow" />
+        <title key="title">NextJS News App</title>
+        <meta name="description" key="description" content="NextJS crash course by Coding in Flow" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
