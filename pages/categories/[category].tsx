@@ -1,9 +1,30 @@
 import NewsArticlesGrid from "@/components/NewsArticlesGrid";
 import { NewsArticle, NewsResponse } from "@/models/NewsArticles";
-import { GetStaticProps } from "next";
+import { GetStaticPaths, GetStaticProps } from "next";
 
 interface CategoryNewsPageProps {
     newsArticles: NewsArticle[]
+}
+
+// Define the paths before fetching static data
+export const getStaticPaths: GetStaticPaths = async () => {
+    const categorySlugs = [
+        'business',
+        'entertainment',
+        'general',
+        'health',
+        'science',
+        'sports',
+        'tecchnology',
+    ];
+
+    // Need specific format with params{}
+    const paths = categorySlugs.map(slug => ({ params: { category: slug } }))
+
+    return {
+        paths,
+        fallback: false
+    }
 }
 
 // Get data at compile time using GetStaticProps
