@@ -1,4 +1,5 @@
 import NewsArticleEntry from '@/components/NewsArticleEntry'
+import NewsArticlesGrid from '@/components/NewsArticlesGrid'
 import { NewsArticle, NewsResponse } from '@/models/NewsArticles'
 import { GetServerSideProps } from 'next'
 import Head from 'next/head'
@@ -29,7 +30,7 @@ export default function BreakingNewsPage({ newsArticles }: BreakingNewsPageProps
       </Head>
       <main>
         <h1>Breaking News</h1>
-        <NewsArticleEntry article={newsArticles[0]} />
+        <NewsArticlesGrid articles={newsArticles} />
       </main>
     </>
   )
