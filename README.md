@@ -13,3 +13,8 @@ Tech stack: NextJs v13, Bootstrap, NextJS Progressbar
 > yarn add bootstrap react-bootstrap nextjs-progressbar
 > yarn dev
 ```
+
+Set up backend api
+```
+http://localhost:3000/api/search-news?q=sports
+```
