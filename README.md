@@ -18,3 +18,18 @@ Set up backend api
 ```
 http://localhost:3000/api/search-news?q=sports
 ```
+
+Category page using static to generated pages at compile time
+```
+http://localhost:3000/categories/general
+
+Here are all the predefined paths/categories
+        'business',
+        'entertainment',
+        'general',
+        'health',
+        'science',
+        'sports',
+        'technology',
+
+```

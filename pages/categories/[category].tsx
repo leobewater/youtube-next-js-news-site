@@ -37,11 +37,13 @@ export const getStaticProps: GetStaticProps<CategoryNewsPageProps> = async ({ pa
     return {
         props: {
             newsArticles: newsResponse.articles
-        }
+        },
+        revalidate: 5 * 60,// refresh every 5 mins when someone open the pages and cached in server
     }
 }
 
 const CategoryNewsPage = ({ newsArticles }: CategoryNewsPageProps) => {
+    
     return (<>
         <main>
             <NewsArticlesGrid articles={newsArticles} />
