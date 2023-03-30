@@ -1,5 +1,7 @@
 Video: https://www.youtube.com/watch?v=e1EIwuO-Dlo&t=4465s&ab_channel=CodinginFlow
 
+NewsAPI: https://newsapi.org/docs/endpoints/everything
+
 Tech stack: NextJs v13, Bootstrap, NextJS Progressbar
 
 ```
