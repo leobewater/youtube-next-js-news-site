@@ -1,3 +1,4 @@
+import NewsArticleEntry from '@/components/NewsArticleEntry'
 import { NewsArticle, NewsResponse } from '@/models/NewsArticles'
 import { GetServerSideProps } from 'next'
 import Head from 'next/head'
@@ -28,7 +29,7 @@ export default function BreakingNewsPage({ newsArticles }: BreakingNewsPageProps
       </Head>
       <main>
         <h1>Breaking News</h1>
-        {JSON.stringify(newsArticles)}
+        <NewsArticleEntry article={newsArticles[0]} />
       </main>
     </>
   )
