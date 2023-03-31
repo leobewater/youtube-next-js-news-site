@@ -23,6 +23,7 @@ export const getServerSideProps: GetServerSideProps<BreakingNewsPageProps> = asy
       newsArticles: newsResponse.articles
     }
   }
+  // let error go to 500 page
 }
 
 // Set the prop and its type

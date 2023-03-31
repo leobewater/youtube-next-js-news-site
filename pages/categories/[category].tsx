@@ -43,6 +43,7 @@ export const getStaticProps: GetStaticProps<CategoryNewsPageProps> = async ({ pa
         },
         revalidate: 5 * 60,// refresh every 5 mins when someone open the pages and cached in server
     }
+    // let error go to 500 page
 }
 
 const CategoryNewsPage = ({ newsArticles }: CategoryNewsPageProps) => {
