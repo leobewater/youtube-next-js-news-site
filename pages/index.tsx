@@ -13,7 +13,7 @@ interface BreakingNewsPageProps {
 
 // Get data on server side, API key not going to be exposed
 export const getServerSideProps: GetServerSideProps<BreakingNewsPageProps> = async () => {
-  // Delay
+  // Delay - simulate server side loading data from api
   // await new Promise(r => setTimeout(r, 3000));
 
   const response = await fetch(`https://newsapi.org/v2/top-headlines?country=us&apiKey=${process.env.NEWS_API_KEY}`);
