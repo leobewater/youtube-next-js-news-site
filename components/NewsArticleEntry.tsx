@@ -2,6 +2,7 @@ import { NewsArticle } from "@/models/NewsArticles";
 import Image from "next/image";
 import { Card } from "react-bootstrap";
 import placeHolderImage from '@/assets/images/newsarticle_placeholder.jpg'
+import styles from '@/styles/NewsArticle.module.css'
 
 // Set up component prop
 interface NewsArticleEntryProps {
@@ -19,7 +20,8 @@ const NewsArticleEntry = ({ article: { title, description, url, urlToImage } }: 
                 src={validImageUrl || placeHolderImage}
                 width={500}
                 height={200} 
-                alt={title} />
+                alt={title} 
+                className={`card-img-top ${styles.image}`} />
             <Card.Body>
                 <Card.Title>{title}</Card.Title>
                 <Card.Text>{description}</Card.Text>
